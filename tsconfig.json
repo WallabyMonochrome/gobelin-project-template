@@ -12,8 +12,8 @@
 
     /* Language and Environment */
     "target": "es2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "lib": ["ES2020", "DOM", "ES2020.Symbol", "ES2020.Symbol.WellKnown", "ES2015.Iterator", "ES2015.Iterable", "ES2015.Promise", "ES2015.Collection"],  /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "jsx": "react-jsx",                                /* Specify what JSX code is generated. */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],  /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    // "jsx": "preserve",                                  /* Specify what JSX code is generated. */
     // "libReplacement": true,                           /* Enable lib replacement. */
     // "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
@@ -113,7 +113,6 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.js",
-    "src/shaders/**/*.glsl"
-, "src/main.tsx"  ]
+    "src/**/*.js"
+]
 }

@@ -16,8 +16,6 @@ export default class Experience {
   timer = new THREE.Timer();
   debug = new Pane();
 
-  cube = this.createCube();
-
   async init() {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -29,8 +27,14 @@ export default class Experience {
     this.camera.position.set(9, 2, -5);
     this.controls.enableDamping = true;
 
-    this.scene.add(this.cube);
-    this.debug.addBinding(this.cube.rotation, "y", { label: "rotationY", min: 0, max: Math.PI * 2 });
+    const cube = this.createCube();
+
+    this.scene.add(cube);
+    this.debug.addBinding(cube.rotation, "y", {
+      label: "rotationY",
+      min: 0,
+      max: Math.PI * 2,
+    });
 
     this.timer.connect(document);
     window.addEventListener("resize", this.resize);
